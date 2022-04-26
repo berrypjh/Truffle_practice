@@ -6,7 +6,7 @@ import MusicCard from '$components/views/cards/MusicCard';
 import { useTranslation } from 'react-i18next';
 
 const LatestMusicAll = ({ func }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [musics, setMusics] = useState([]);
   const getMusic = async () => {
     try {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { END } from 'redux-saga';
 import axios from 'axios';
-import './i18next';
+
+import { withTranslation } from 'react-i18next';
+import '$util/i18next';
 import wrapper from '$reduxsaga/store/configureStore';
 import HomePage from '$components/views/homepage/Home';
 import { myInfoRequestAction } from '$reduxsaga/request/user_request';
@@ -30,4 +32,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
     },
 );
 
-export default Home;
+export default withTranslation()(Home);

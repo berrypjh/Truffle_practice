@@ -1,7 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
-import { AppBar, Toolbar, Tabs } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  Tabs,
+  Box,
+  FormControl,
+  NativeSelect,
+} from '@mui/material';
 
 import {
   loginRequestAction,
@@ -14,7 +21,8 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const [t, i18next] = useTranslation('lang', { useSuspense: false });
+
   const { userData, logInUserError } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const { account } = useWalletInfo();
@@ -36,6 +44,13 @@ const Navbar = () => {
       }
     }
   }, [account.data]);
+
+  const onChangeLang = useCallback(e => {
+    console.log(e);
+    // if (e) {
+    //   i18next.changeLanguage('en');
+    // }
+  }, []);
 
   useEffect(() => {
     if (logInUserError) {
@@ -70,6 +85,22 @@ const Navbar = () => {
           <Tabs textColor="inherit" value={false}>
             <NavbarLink />
           </Tabs>
+
+          <Box sx={{ minWidth: 120 }}>
+            <FormControl fullWidth>
+              <NativeSelect
+                defaultValue={10}
+                inputProps={{
+                  name: 'age',
+                  id: 'uncontrolled-native',
+                }}
+                onChange={onChangeLang}
+              >
+                <option value={10}>ko</option>
+                <option value={20}>en</option>
+              </NativeSelect>
+            </FormControl>
+          </Box>
 
           <RegisterCheck />
         </Toolbar>

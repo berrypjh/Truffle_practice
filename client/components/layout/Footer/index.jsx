@@ -53,7 +53,7 @@ const Footer = () => {
   const [duration, setDuration] = useState(0);
   const [currTime, setCurrTime] = useState(0);
   const [mySeekTime, setMySeekTime] = useState(0);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const playingMusic = () => {
     isPlaying
