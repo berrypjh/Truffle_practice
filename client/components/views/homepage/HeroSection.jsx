@@ -32,7 +32,7 @@ function HeroSection({
         >
           <div className="row home_hero_img">
             <div className="home__hero-img-wrapper">
-              <img src={img} alt={alt} className="home__hero-img" />
+              {/* <img src={img} alt={alt} className="home__hero-img" /> */}
             </div>
           </div>
           <div className="row home_hero_img">

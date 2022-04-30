@@ -79,13 +79,13 @@ const Studio = () => {
       <Box sx={style.studioDescription}>
         <Box sx={style.studioDescriptionTitle}>
           {artistName}
-          <Image
+          {/* <Image
             src="/verify.png"
             alt="verify image"
             layout="fixed"
             width="25px"
             height="25px"
-          />
+          /> */}
         </Box>
         <Box sx={style.studioDescriptionGraph}>
           <Box sx={style.studioDescriptionGraphContentLeft}>

@@ -43,13 +43,13 @@ export default function StreamingSideBar() {
             sx={{ color: 'white', fontSize: '100px' }}
           >
             <ListItemIcon>
-              <img
+              {/* <img
                 width="65px"
                 height="65px"
                 src="/logoW.png"
                 alt="logo"
                 style={{ marginRight: '10px' }}
-              />
+              /> */}
             </ListItemIcon>
             <ListItemText primary={'Home'} />
           </ListItem>

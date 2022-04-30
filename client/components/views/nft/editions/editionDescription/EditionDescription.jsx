@@ -54,12 +54,12 @@ const EditionDescription = ({ owner, musicData, musicPrice }) => {
           display: 'inline-block',
         }}
       >
-        <img
+        {/* <img
           src="/verify.png"
           width={'23px'}
           height={'23px'}
           style={{ marginLeft: '4px' }}
-        />
+        /> */}
       </Box>
 
       <Box sx={{ fontSize: '70px', fontWeight: 500, margin: '20px 0 0 ' }}>

@@ -63,17 +63,19 @@ const StudioBackground = ({ background }) => {
   return (
     <Box>
       {background === 'defaultBackground' || background === undefined ? (
-        <img
+        <>
+        {/* <img
           src="/defaultBackground.jpg"
           alt="default Background"
           width={'100%'}
-        />
+        /> */}
+        </>
       ) : (
         <>
-          <img
+          {/* <img
             src={`https://webwebweb3.s3.ap-northeast-2.amazonaws.com/background/${artistName}_${background}`}
             width={'100%'}
-          />
+          /> */}
           {console.log('mmmmmmmmmmmm', artistName)}
         </>
       )}

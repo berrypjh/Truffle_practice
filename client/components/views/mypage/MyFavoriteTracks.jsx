@@ -32,7 +32,7 @@ const MyFavoriteTracks = () => {
       <br />
       <div className="likedList">
         <Card sx={{ maxWidth: 200 }}>
-          <CardMedia component="img" height="200" image="" alt="앨범커버" />
+          {/* <CardMedia component="img" height="200" image="" alt="앨범커버" /> */}
           <CardContent>
             <IconButton>
               <FavoriteIcon />
