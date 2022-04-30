@@ -4,23 +4,19 @@ const StudioProfile = ({ profile }) => {
   return (
     <>
       {profile === 'defaultProfile' ? (
-        <>
-        {/* <img
+        <img
           src="/defaultProfile.png"
           width={'150px'}
           height={'150px'}
           style={{ borderRadius: '100%' }}
-          /> */}
-          </>
+        />
       ) : (
-        <>
-        {/* <img
+        <img
           src={profile}
           width={'150px'}
           height={'150px'}
           style={{ borderRadius: '100%' }}
-        /> */}
-        </>
+        />
       )}
     </>
   );

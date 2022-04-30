@@ -9,7 +9,7 @@ const BidBox = ({ gapTime, highestBidder, auctionMinimumBid, highestBid }) => {
         <>
           <AuctionGray>최종 낙찰가</AuctionGray>
           <AuctionBox>
-            {/* <EthereumImg src="/ethereum-1.svg" alt="ethereum" /> */}
+            <EthereumImg src="/ethereum-1.svg" alt="ethereum" />
             {highestBid}
           </AuctionBox>
           {highestBidder && <AuctionGray>낙찰자 - {highestBidder}</AuctionGray>}
@@ -18,7 +18,7 @@ const BidBox = ({ gapTime, highestBidder, auctionMinimumBid, highestBid }) => {
         <>
           <AuctionGray>현재 경매가</AuctionGray>
           <AuctionBox>
-            {/* <EthereumImg src="/ethereum-1.svg" alt="ethereum" /> */}
+            <EthereumImg src="/ethereum-1.svg" alt="ethereum" />
             {highestBid}
           </AuctionBox>
           <AuctionGray>
