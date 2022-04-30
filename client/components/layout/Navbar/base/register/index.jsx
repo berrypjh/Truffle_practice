@@ -15,11 +15,15 @@ const RegisterCheck = () => {
 
   const { network, account } = useWalletInfo();
   const { hasInitialResponse, isSupported, target } = network;
-  const { isLoading, requireInstall } = useWeb3();
+  const { isLoading, requireInstall, connect } = useWeb3();
   const [open, setOpen] = useState(false);
 
   const handleMetaMaskOpen = useCallback(() => {
     setOpen(true);
+  }, []);
+
+  const metamaskClick = useCallback(() => {
+    connect();
   }, []);
 
   // useEffect(() => {
@@ -73,7 +77,9 @@ const RegisterCheck = () => {
             <span style={{ paddingRight: '10px' }}>
               <ErrorOutline />
             </span>
-            메타마스크 로그인 해주세요!
+            <span onClick={metamaskClick}>
+              메타마스크 로그인 해주세요!
+            </span>
           </div>
         </div>
       )}
