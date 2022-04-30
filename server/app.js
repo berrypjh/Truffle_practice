@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(helmet({ contentSecurityPolicy: false }));
   app.use(
     cors({
-      origin: 'http://3.36.53.64',
+      origin: 'http://3.36.105.49',
       credentials: true,
     }),
   );
@@ -68,7 +68,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/api', Router);
+app.use('/', Router);
 
 /* 404 처리 */
 app.use((req, res, next) => {
