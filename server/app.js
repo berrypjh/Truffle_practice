@@ -62,14 +62,14 @@ app.use(
     cookie: {
       httpOnly: true,
       secure: false,
-      domain: process.env.NODE_ENV === 'production' && '.webwebweb3.site'
+      domain: process.env.NODE_ENV === 'production' && '.webwebweb3.site',
     },
   }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', Router);
+app.use('/api', Router);
 
 /* 404 처리 */
 app.use((req, res, next) => {
