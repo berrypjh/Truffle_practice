@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(helmet({ contentSecurityPolicy: false }));
   app.use(
     cors({
-      origin: 'http://3.36.105.49',
+      origin: 'http://webwebweb3.site',
       credentials: true,
     }),
   );
@@ -62,6 +62,7 @@ app.use(
     cookie: {
       httpOnly: true,
       secure: false,
+      domain: process.env.NODE_ENV === 'production' && '.webwebweb3.site'
     },
   }),
 );
