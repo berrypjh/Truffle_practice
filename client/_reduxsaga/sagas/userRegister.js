@@ -135,7 +135,10 @@ function myInfoAPI() {
 
 function* myInfo() {
   try {
+    console.log("datatattqtatata");
     const result = yield call(myInfoAPI);
+
+    console.log(result.data);
 
     yield put({
       type: MY_INFO_SUCCESS,

@@ -9,6 +9,8 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
   try {
+    console.log(req.user);
+    
     if (req.user) {
       const UserInfo = await User.findOne({
         where: { metamask: req.user.metamask },
